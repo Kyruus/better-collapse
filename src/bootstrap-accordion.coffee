@@ -28,26 +28,22 @@ class Accordion
 
 
 $.fn.extend
-  accordion: (options) ->
+  accordion: (method) ->
     # Default settings
     settings =
       open_target: '.js-open_target'
       closed_target: '.js-closed_target'
 
-    if options and typeof options == 'object'
-      settings = $.extend settings, options
-
-
-
-    # _Insert magic here._
     return @each () ->
       $this = $ @
+      settings = $.extend settings, $this.data()
       data = $this.data("accordion")
-      unless data
-        data = $this.data("accordion", new Accordion(@, $this.data()))
       
-      if options and typeof options == 'string'
-        data[options]()
+      unless data
+        data = $this.data("accordion", new Accordion(@, settings))
+      
+      if method and typeof method == 'string'
+        data[method]()
 
 $(document).on("show.accordion.data-api hide.accordion.data-api", "[data-toggle=accordion]", (e) ->
   $(this).accordion e.type
