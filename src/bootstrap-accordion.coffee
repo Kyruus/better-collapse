@@ -21,7 +21,7 @@ class Accordion
     @open_element.hide()
 
   is_open: ->
-    return true  if @element.find(".accordion-body.collapse.in").filter(":visible").length > 0
+    return true  if @element.find(".collapse.in").filter(":visible").length > 0
     false
 
 
