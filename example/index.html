@@ -24,18 +24,18 @@
         <ol>
           <li>Create an accordion as you would normally with bootstrap.</li>
           <li>Add a <code>data-toggle="accordion"</code> to each <code>.accordion-group</code> element.</li>
-          <li>Add the class <code>js-closed_target</code> to any children of the <code>accordion-group</code> that should be visible only when the group is closed.</li>
-          <li>Add the class <code>js-open_target</code> to any children of the <code>accordion-group</code> that should be visible only when the group is open.</li>
+          <li>Add the class <code>js-close-target</code> to any children of the <code>accordion-group</code> that should be visible only when the group is closed.</li>
+          <li>Add the class <code>js-open-target</code> to any children of the <code>accordion-group</code> that should be visible only when the group is open.</li>
         </ol>
         <h3>Options</h3>
         <ol>
-          <li>Adding the attribute <code>data-open_target=".icon-minus"</code> to an accordion group will change the default closed target class to <code>icon-minus</code> as opposed to <code>js-closed_target</code></li>
-          <li>The attribute <code>data-closed_target=".icon-plus"</code> performs the same override to the open class.</li>
+          <li>Adding the attribute <code>data-open-target=".icon-minus"</code> to an accordion group will change the default closed target class to <code>icon-minus</code> as opposed to <code>js-close-target</code></li>
+          <li>The attribute <code>data-close-target=".icon-plus"</code> performs the same override to the open class.</li>
         </ol>
         <h3>Example</h3>
         <div class="bs-docs-example">
           <div class="accordion" id="accordion2">
-            <div class="accordion-group" data-toggle="accordion" data-open_target=".icon-minus" data-closed_target=".icon-plus">
+            <div class="accordion-group" data-toggle="accordion" data-open-target=".icon-minus" data-close-target=".icon-plus">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" >
                   <i class="icon-plus"></i>
@@ -57,8 +57,8 @@
             <div class="accordion-group" data-toggle="accordion">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  <i class="icon-plus js-closed_target"></i>
-                  <i class="icon-minus js-open_target"></i>
+                  <i class="icon-plus js-close-target"></i>
+                  <i class="icon-minus js-open-target"></i>
                   Collapsible Group Item #2
                 </a>
               </div>
@@ -73,7 +73,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-group" data-toggle="accordion" data-open_target=".icon-minus" data-closed_target=".icon-plus">
+            <div class="accordion-group" data-toggle="accordion" data-open-target=".icon-minus" data-close-target=".icon-plus">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
                   <i class="icon-plus"></i>
@@ -96,7 +96,7 @@
         </div>
 <pre class="prettyprint linenums">
   &lt;div class=&quot;accordion&quot; id=&quot;accordion2&quot;&gt;
-    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot; data-open_target=&quot;.icon-minus&quot; data-closed_target=&quot;.icon-plus&quot;&gt;
+    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot; data-open-target=&quot;.icon-minus&quot; data-close-target=&quot;.icon-plus&quot;&gt;
       &lt;div class=&quot;accordion-heading&quot;&gt;
         &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseOne&quot; &gt;
           &lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;
@@ -113,8 +113,8 @@
     &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot;&gt;
       &lt;div class=&quot;accordion-heading&quot;&gt;
         &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseTwo&quot;&gt;
-          &lt;i class=&quot;icon-plus js-closed_target&quot;&gt;&lt;/i&gt;
-          &lt;i class=&quot;icon-minus js-open_target&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon-plus js-close-target&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon-minus js-open-target&quot;&gt;&lt;/i&gt;
           Collapsible Group Item #2
         &lt;/a&gt;
       &lt;/div&gt;
@@ -124,7 +124,7 @@
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot; data-open_target=&quot;.icon-minus&quot; data-closed_target=&quot;.icon-plus&quot;&gt;
+    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot; data-open-target=&quot;.icon-minus&quot; data-close-target=&quot;.icon-plus&quot;&gt;
       &lt;div class=&quot;accordion-heading&quot;&gt;
         &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseThree&quot;&gt;
           &lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;

@@ -3,8 +3,8 @@ $ = jQuery
 class Accordion
   constructor: (@element, @settings) ->
     @element = $ @element
-    @open_element = @element.find @settings.open_target
-    @closed_element = @element.find @settings.closed_target
+    @open_element = @element.find @settings.openTarget
+    @closed_element = @element.find @settings.closeTarget
 
     if @is_open()
       @show()
@@ -31,8 +31,8 @@ $.fn.extend
   accordion: (method) ->
     # Default settings
     settings =
-      open_target: '.js-open_target'
-      closed_target: '.js-closed_target'
+      open_target: '.js-open-target'
+      closed_target: '.js-close-target'
 
     return @each () ->
       $this = $ @
