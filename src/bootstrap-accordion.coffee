@@ -1,49 +1,55 @@
-$ = jQuery
+jQuery ->
+  class Accordion
+    constructor: (element, options) ->
+      @$element = $ element
+      @settings = $.extend {}, @defaults, options
+      @open_element = @$element.find @settings.openTarget
+      @closed_element = @$element.find @settings.closeTarget
 
-class Accordion
-  constructor: (@element, @settings) ->
-    @element = $ @element
-    @open_element = @element.find @settings.openTarget
-    @closed_element = @element.find @settings.closeTarget
+      @render()
+    
+    render: ->
+      if @is_open()
+        @show()
+      else
+        @hide()
 
-    if @is_open()
-      @show()
-    else
-      @hide()
+    show: ->
+      @open_element.show()
+      @closed_element.hide()
 
+    hide: ->
+      @closed_element.show()
+      @open_element.hide()
 
-  show: ->
-    @open_element.show()
-    @closed_element.hide()
+    is_open: ->
+      if @$element.find(".collapse.in").filter(":visible").length > 0
+        return true  
+      false
 
-  hide: ->
-    @closed_element.show()
-    @open_element.hide()
+  Accordion::defaults =
+    openTarget: '.js-open-target'
+    closeTarget: '.js-close-target'
 
-  is_open: ->
-    return true  if @element.find(".collapse.in").filter(":visible").length > 0
-    false
-
-
-
-
-$.fn.extend
-  accordion: (method) ->
-    # Default settings
-    settings =
-      open_target: '.js-open-target'
-      closed_target: '.js-close-target'
-
-    return @each () ->
-      $this = $ @
-      settings = $.extend settings, $this.data()
-      data = $this.data("accordion")
+  $.fn.accordion = ( options ) ->
+    this.each ->
+      $this = $ this
       
-      unless data
-        data = $this.data("accordion", new Accordion(@, settings))
-      
-      if method and typeof method == 'string'
-        data[method]()
+      plugin = $this.data 'accordion' 
+
+      if plugin is undefined
+        settings = $.extend {}, $this.data(), options
+        plugin = new Accordion this, settings
+        $this.data 'accordion', plugin
+
+      if $.type(options) is 'string'
+        plugin[options]()
+
+
+
+
+
+
 
 $(document).on("show.accordion.data-api hide.accordion.data-api", "[data-toggle=accordion]", (e) ->
   $(this).accordion e.type
