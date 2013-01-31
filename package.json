@@ -1,0 +1,10 @@
+{
+  "name": "bootstrap-accordion",
+  "version": "1.0.2",
+  "jam": {
+    "main":  "lib/bootstrap-accordion.js",
+    "include": [
+      "lib/bootstrap-accordion.js"
+    ]
+  }
+}
