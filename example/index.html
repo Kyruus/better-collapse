@@ -32,7 +32,7 @@
           <li>Adding the attribute <code>data-open-target=".icon-minus"</code> to an accordion group will change the default closed target class to <code>icon-minus</code> as opposed to <code>js-close-target</code></li>
           <li>The attribute <code>data-close-target=".icon-plus"</code> performs the same override to the open class.</li>
         </ol>
-        <h3>Example</h3>
+        <h3>Example Accordion</h3>
         <div class="bs-docs-example">
           <div class="accordion" id="accordion2">
             <div class="accordion-group" data-toggle="accordion" data-open-target=".icon-minus" data-close-target=".icon-plus">
@@ -139,7 +139,27 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</pre>
+</pre>  
+        <!-- Expand ================================================== -->
+        <h3>Example Expand</h3>
+        <div class="bs-docs-example">
+          <div data-toggle="accordion">
+            <p>What is Lorem ipsum?
+              <a href="#expand-section" data-toggle="collapse">
+                <span class="js-open-target">Hide</span>
+                <span class="js-close-target">Show</span>
+              </a>
+            </p>
+            <div id="expand-section" class="collapse">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   <script type="text/javascript">
