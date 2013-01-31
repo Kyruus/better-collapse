@@ -1,8 +1,5 @@
 {
   "name": "bootstrap-accordion",
   "version": "1.0.2",
-  "main": "./lib/bootstrap-accordion.js",
-  "dependencies": {
-    "jquery": "~1.7.2"
-  }
+  "main": "./lib/bootstrap-accordion.js"
 }
