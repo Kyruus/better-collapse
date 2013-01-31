@@ -1,10 +1,17 @@
 {
   "name": "bootstrap-accordion",
   "version": "1.0.2",
+  "description": "A better bootstrap accordion",
   "jam": {
     "main":  "lib/bootstrap-accordion.js",
     "include": [
       "lib/bootstrap-accordion.js"
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "git", 
+      "url": "https://github.com/Kyruus/bootstrap-accordion.git"
+    }
+  ]
 }
