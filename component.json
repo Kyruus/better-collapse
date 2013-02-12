@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-accordion",
+  "name": "better-collapse",
   "version": "2.0.2",
-  "main": "./lib/bootstrap-accordion.js"
+  "main": "./lib/better-collapse.js"
 }
