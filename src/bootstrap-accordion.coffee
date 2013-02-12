@@ -16,12 +16,12 @@ jQuery ->
         @hide()
 
     show: ->
-      @open_element.show()
-      @closed_element.hide()
+      @open_element.removeClass 'hide'
+      @closed_element.addClass 'hide'
 
     hide: ->
-      @closed_element.show()
-      @open_element.hide()
+      @closed_element.removeClass 'hide'
+      @open_element.addClass 'hide'
 
     is_open: ->
       if @$collapse.parent().find(".collapse.in").filter(":visible").length > 0
