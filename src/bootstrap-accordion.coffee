@@ -2,6 +2,7 @@ jQuery ->
   class Accordion
     constructor: (element, options) ->
       @$element = $ element
+      @$collapse = $ @$element.attr("data-target") or (href = @$element.attr("href")) and href.replace(/.*(?=#[^\s]+$)/, "")
       @settings = $.extend {}, @defaults, options
       @open_element = @$element.find @settings.openTarget
       @closed_element = @$element.find @settings.closeTarget
@@ -23,7 +24,7 @@ jQuery ->
       @open_element.hide()
 
     is_open: ->
-      if @$element.find(".collapse.in").filter(":visible").length > 0
+      if @$collapse.parent().find(".collapse.in").filter(":visible").length > 0
         return true  
       false
 
@@ -34,14 +35,13 @@ jQuery ->
   $.fn.accordion = ( options ) ->
     this.each ->
       $this = $ this
-      
+    
       plugin = $this.data 'accordion' 
 
       if plugin is undefined
         settings = $.extend {}, $this.data(), options
         plugin = new Accordion this, settings
         $this.data 'accordion', plugin
-
       if $.type(options) is 'string'
         plugin[options]()
 
@@ -51,7 +51,10 @@ jQuery ->
 
 
 
-$(document).on("show.accordion.data-api hide.accordion.data-api", "[data-toggle=accordion]", (e) ->
-  $(this).accordion e.type
+
+
+$(document).on("click.collapse.data-api", "[data-toggle=collapse]", (e) ->
+  $this = $ this
+  $this.accordion 'render'
 ).ready ->
-  $("[data-toggle=accordion]").accordion()     
+  $("[data-toggle=collapse]").accordion()     

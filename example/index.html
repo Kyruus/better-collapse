@@ -35,9 +35,9 @@
         <h3>Example Accordion</h3>
         <div class="bs-docs-example">
           <div class="accordion" id="accordion2">
-            <div class="accordion-group" data-toggle="accordion" data-open-target=".icon-minus" data-close-target=".icon-plus">
+            <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" >
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" data-open-target=".icon-minus" data-close-target=".icon-plus">
                   <i class="icon-plus"></i>
                   <i class="icon-minus"></i>
                   Collapsible Group Item #1
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-group" data-toggle="accordion">
+            <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
                   <i class="icon-plus js-close-target"></i>
@@ -73,9 +73,9 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-group" data-toggle="accordion" data-open-target=".icon-minus" data-close-target=".icon-plus">
+            <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" data-open-target=".icon-minus" data-close-target=".icon-plus">
                   <i class="icon-plus"></i>
                   <i class="icon-minus"></i>
                   Collapsible Group Item #3
@@ -95,55 +95,55 @@
           </div>
         </div>
 <pre class="prettyprint linenums">
-  &lt;div class=&quot;accordion&quot; id=&quot;accordion2&quot;&gt;
-    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot; data-open-target=&quot;.icon-minus&quot; data-close-target=&quot;.icon-plus&quot;&gt;
-      &lt;div class=&quot;accordion-heading&quot;&gt;
-        &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseOne&quot; &gt;
-          &lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;
-          &lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;
-          Collapsible Group Item #1
-        &lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div id=&quot;collapseOne&quot; class=&quot;accordion-body collapse in&quot;&gt;
-        &lt;div class=&quot;accordion-inner&quot;&gt;
-          Content
-        &lt;/div&gt;
-      &lt;/div&gt;
+&lt;div class=&quot;accordion&quot; id=&quot;accordion2&quot;&gt;
+  &lt;div class=&quot;accordion-group&quot;&gt;
+    &lt;div class=&quot;accordion-heading&quot;&gt;
+      &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseOne&quot; data-open-target=&quot;.icon-minus&quot; data-close-target=&quot;.icon-plus&quot;&gt;
+        &lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;
+        &lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;
+        Collapsible Group Item #1
+      &lt;/a&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot;&gt;
-      &lt;div class=&quot;accordion-heading&quot;&gt;
-        &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseTwo&quot;&gt;
-          &lt;i class=&quot;icon-plus js-close-target&quot;&gt;&lt;/i&gt;
-          &lt;i class=&quot;icon-minus js-open-target&quot;&gt;&lt;/i&gt;
-          Collapsible Group Item #2
-        &lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div id=&quot;collapseTwo&quot; class=&quot;accordion-body collapse&quot;&gt;
-        &lt;div class=&quot;accordion-inner&quot;&gt;
-          Content
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;accordion-group&quot; data-toggle=&quot;accordion&quot; data-open-target=&quot;.icon-minus&quot; data-close-target=&quot;.icon-plus&quot;&gt;
-      &lt;div class=&quot;accordion-heading&quot;&gt;
-        &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseThree&quot;&gt;
-          &lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;
-          &lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;
-          Collapsible Group Item #3
-        &lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div id=&quot;collapseThree&quot; class=&quot;accordion-body collapse&quot;&gt;
-        &lt;div class=&quot;accordion-inner&quot;&gt;
-          Content
-        &lt;/div&gt;
+    &lt;div id=&quot;collapseOne&quot; class=&quot;accordion-body collapse in&quot;&gt;
+      &lt;div class=&quot;accordion-inner&quot;&gt;
+        Lorem ipsum dolor sit amet...
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+  &lt;div class=&quot;accordion-group&quot;&gt;
+    &lt;div class=&quot;accordion-heading&quot;&gt;
+      &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseTwo&quot;&gt;
+        &lt;i class=&quot;icon-plus js-close-target&quot;&gt;&lt;/i&gt;
+        &lt;i class=&quot;icon-minus js-open-target&quot;&gt;&lt;/i&gt;
+        Collapsible Group Item #2
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;collapseTwo&quot; class=&quot;accordion-body collapse&quot;&gt;
+      &lt;div class=&quot;accordion-inner&quot;&gt;
+        Lorem ipsum dolor sit amet...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;accordion-group&quot;&gt;
+    &lt;div class=&quot;accordion-heading&quot;&gt;
+      &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseThree&quot; data-open-target=&quot;.icon-minus&quot; data-close-target=&quot;.icon-plus&quot;&gt;
+        &lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;
+        &lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;
+        Collapsible Group Item #3
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;collapseThree&quot; class=&quot;accordion-body collapse&quot;&gt;
+      &lt;div class=&quot;accordion-inner&quot;&gt;
+        Lorem ipsum dolor sit amet...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>  
         <!-- Expand ================================================== -->
         <h3>Example Expand</h3>
         <div class="bs-docs-example">
-          <div data-toggle="accordion">
+          <div>
             <p>What is Lorem ipsum?
               <a href="#expand-section" data-toggle="collapse">
                 <span class="js-open-target">Hide</span>
