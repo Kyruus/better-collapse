@@ -1,6 +1,6 @@
-bootstrap-accordion
+better-collapse
 ===================
 
-A better bootstrap accordion
+Addon to bootstrap-collapse to enable icons,
 
-See example [here](http://kyruus.github.com/bootstrap-accordion/example/)
+See example [here](http://kyruus.github.com/better-collapse/example/)
