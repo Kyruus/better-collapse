@@ -1,14 +1,9 @@
 <html>
   <head>
-    <title>Bootstrap Accordion</title>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
-
+    <title>Better Collapse</title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/docs.css">
-    <script type="text/javascript" src="../lib/better-collapse.js"></script>
   </head>
   <body>
     <div class="container">
@@ -37,9 +32,9 @@
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" data-open-target=".my-open-class" data-close-target=".my-close-class">
-                  <span class="my-close-class"><i class="icon-plus"></i></span>
-                  <span class="my-open-class"><i class="icon-minus"></i></span>
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  <span data-hide-on="collapsed"><i class="icon-plus"></i></span>
+                  <span data-hide-on="expanded"><i class="icon-minus"></i></span>
                   Collapsible Group Item #1
                 </a>
               </div>
@@ -57,8 +52,8 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  <span class="js-close-target"><i class="icon-plus"></i></span>
-                  <span class="js-open-target"><i class="icon-minus"></i></span> 
+                  <span data-hide-on="collapsed"><i class="icon-plus"></i></span>
+                  <span data-hide-on="expanded"><i class="icon-minus"></i></span>
                   Collapsible Group Item #2
                 </a>
               </div>
@@ -75,9 +70,9 @@
             </div>
             <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" data-open-target=".my-open-class" data-close-target=".my-close-class">
-                  <span class="my-close-class"><i class="icon-plus"></i></span>
-                  <span class="my-open-class"><i class="icon-minus"></i></span>
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  <span data-hide-on="collapsed"><i class="icon-plus"></i></span>
+                  <span data-hide-on="expanded"><i class="icon-minus"></i></span>
                   Collapsible Group Item #3
                 </a>
               </div>
@@ -140,28 +135,33 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>  
-        <!-- Expand ================================================== -->
-        <h3>Example Expand</h3>
-        <div class="bs-docs-example">
-          <div>
-            <p>What is Lorem ipsum?
-              <a href="#expand-section" data-toggle="collapse">
-                <span class="js-open-target">Hide</span>
-                <span class="js-close-target">Show</span>
-              </a>
-            </p>
-            <div id="expand-section" class="collapse">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+      <!-- Expand ================================================== -->
+      <h3>Example Expand & Collapse</h3>
+      <div class="bs-docs-example">
+        <div>
+          <p>What is Lorem ipsum?
+            <a href="#expand-section" data-toggle="collapse">
+              <span data-hide-on="collapsed">Hide</span>
+              <span data-hide-on="expanded">Show</span>
+            </a>
+          </p>
+          <div id="expand-section" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../lib/better-collapse.js"></script>
   <script type="text/javascript">
     window.prettyPrint && window.prettyPrint();
   </script>

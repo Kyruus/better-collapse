@@ -4,8 +4,8 @@ jQuery ->
       @$element = $ element
       @$collapse = $ @$element.attr("data-target") or (href = @$element.attr("href")) and href.replace(/.*(?=#[^\s]+$)/, "")
       @settings = $.extend {}, @defaults, options
-      @open_element = @$element.find @settings.openTarget
-      @closed_element = @$element.find @settings.closeTarget
+      @open_element = @$element.find @settings.hideOnCollapsed
+      @closed_element = @$element.find @settings.hideOnExpanded
 
       @render()
     
@@ -25,18 +25,18 @@ jQuery ->
 
     is_open: ->
       if @$collapse.parent().find(".collapse.in").filter(":visible").length > 0
-        return true  
+        return true
       false
 
   Accordion::defaults =
-    openTarget: '.js-open-target'
-    closeTarget: '.js-close-target'
+    hideOnCollapsed: '[data-hide-on=collapsed]'
+    hideOnExpanded: '[data-hide-on=expanded]'
 
   $.fn.accordion = ( options ) ->
     this.each ->
       $this = $ this
     
-      plugin = $this.data 'accordion' 
+      plugin = $this.data 'accordion'
 
       if plugin is undefined
         settings = $.extend {}, $this.data(), options
@@ -57,4 +57,4 @@ $(document).on("click.collapse.data-api", "[data-toggle=collapse]", (e) ->
   $this = $ this
   $this.accordion 'render'
 ).ready ->
-  $("[data-toggle=collapse]").accordion()     
+  $("[data-toggle=collapse]").accordion()
