@@ -1,169 +1,195 @@
 <html>
-  <head>
-    <title>Better Collapse</title>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/docs.css">
-  </head>
-  <body>
-    <div class="container">
-      <!-- Accordion ================================================== -->
-      <section id="accordion">
-        <div class="page-header">
-          <h1>Better Collapse <small>better-collapse.js</small></h1>
-        </div>
-        <h3>About</h3>
-        <p>Expands upon the bootstrap collapse plugin to create a better accordion element.</p>
-        <p class="muted"><strong>*</strong> Requires the Bootstrap Transitions, and Collapse plugins to be included.</p>
-        <h3>Usage</h3>
-        <ol>
-          <li>Create an accordion as you would normally with bootstrap.</li>
-          <li>Add a <code>data-toggle="accordion"</code> to each <code>.accordion-group</code> element.</li>
-          <li>Add the class <code>js-close-target</code> to any children of the <code>accordion-group</code> that should be visible only when the group is closed.</li>
-          <li>Add the class <code>js-open-target</code> to any children of the <code>accordion-group</code> that should be visible only when the group is open.</li>
-        </ol>
-        <h3>Options</h3>
-        <ol>
-          <li>Adding the attribute <code>data-open-target=".icon-minus"</code> to an accordion group will change the default closed target class to <code>icon-minus</code> as opposed to <code>js-close-target</code></li>
-          <li>The attribute <code>data-close-target=".icon-plus"</code> performs the same override to the open class.</li>
-        </ol>
-        <h3>Example Accordion</h3>
-        <div class="bs-docs-example">
-          <div class="accordion" id="accordion2">
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                  <span data-hide-on="collapsed"><i class="icon-plus"></i></span>
-                  <span data-hide-on="expanded"><i class="icon-minus"></i></span>
-                  Collapsible Group Item #1
-                </a>
-              </div>
-              <div id="collapseOne" class="accordion-body collapse in">
-                <div class="accordion-inner">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  <span data-hide-on="collapsed"><i class="icon-plus"></i></span>
-                  <span data-hide-on="expanded"><i class="icon-minus"></i></span>
-                  Collapsible Group Item #2
-                </a>
-              </div>
-              <div id="collapseTwo" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                  <span data-hide-on="collapsed"><i class="icon-plus"></i></span>
-                  <span data-hide-on="expanded"><i class="icon-minus"></i></span>
-                  Collapsible Group Item #3
-                </a>
-              </div>
-              <div id="collapseThree" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-<pre class="prettyprint linenums">
-&lt;div class=&quot;accordion&quot; id=&quot;accordion2&quot;&gt;
-  &lt;div class=&quot;accordion-group&quot;&gt;
-    &lt;div class=&quot;accordion-heading&quot;&gt;
-      &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseOne&quot; data-open-target=&quot;.my-open-class&quot; data-close-target=&quot;.my-close-class&quot;&gt;
-        &lt;span class=&quot;my-close-class&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;span class=&quot;my-open-class&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        Collapsible Group Item #1
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id=&quot;collapseOne&quot; class=&quot;accordion-body collapse in&quot;&gt;
-      &lt;div class=&quot;accordion-inner&quot;&gt;
-        Lorem ipsum dolor sit amet...
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;accordion-group&quot;&gt;
-    &lt;div class=&quot;accordion-heading&quot;&gt;
-      &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseTwo&quot;&gt;
-        &lt;span class=&quot;js-close-target&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;span class=&quot;js-open-target&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt; 
-        Collapsible Group Item #2
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id=&quot;collapseTwo&quot; class=&quot;accordion-body collapse&quot;&gt;
-      &lt;div class=&quot;accordion-inner&quot;&gt;
-        Lorem ipsum dolor sit amet...
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;accordion-group&quot;&gt;
-    &lt;div class=&quot;accordion-heading&quot;&gt;
-      &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseThree&quot; data-open-target=&quot;.my-open-class&quot; data-close-target=&quot;.my-close-class&quot;&gt;
-        &lt;span class=&quot;my-close-class&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;span class=&quot;my-open-class&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        Collapsible Group Item #3
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id=&quot;collapseThree&quot; class=&quot;accordion-body collapse&quot;&gt;
-      &lt;div class=&quot;accordion-inner&quot;&gt;
-        Lorem ipsum dolor sit amet...
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>  
-      <!-- Expand ================================================== -->
-      <h3>Example Expand & Collapse</h3>
-      <div class="bs-docs-example">
-        <div>
-          <p>What is Lorem ipsum?
-            <a href="#expand-section" data-toggle="collapse">
-              <span data-hide-on="collapsed">Hide</span>
-              <span data-hide-on="expanded">Show</span>
-            </a>
-          </p>
-          <div id="expand-section" class="collapse">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
+<head>
+  <title>Better Collapse</title>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<div class="container">
+  <!-- Accordion ================================================== -->
+  <section id="accordion">
+    <div class="page-header">
+      <h1><i class="icon-magic icon-large"></i>&nbsp; Better Collapse <small>better-collapse.js</small></h1>
+    </div>
+    <h3>About</h3>
+    <p>Expands upon the Bootstrap collapse plugin to dynamically hide and show elements inside the toggler.</p>
+    <p class="muted">* Requires the Bootstrap Transitions and Collapse plugins to be included.</p>
+    <h3>Usage</h3>
+    <ol>
+      <li>Create a collapse element as you would normally with <a href="http://twitter.github.com/bootstrap/javascript.html#collapse" target="_blank">Bootstrap</a>.</li>
+      <li>Add a <code>data-hide-on="collapsed"</code> to any children of the <code>data-toggle="collapse"</code> element that should be hidden when the toggled element is collapsed.</li>
+      <li>Add a <code>data-hide-on="expanded"</code> to any children of the <code>data-toggle="collapse"</code> element that should be hidden when the toggled element is expanded.</li>
+    </ol>
+
+    <!-- Expand ================================================== -->
+    <h3>Example Expand & Collapse</h3>
+    <div class="bs-docs-example">
+      <div>
+        <p>What is Lorem ipsum?
+          <a href="#toggled-section" data-toggle="collapse">
+            <span data-hide-on="collapsed">Hide &laquo;</span>
+            <span data-hide-on="expanded">Show &raquo;</span>
+          </a>
+        </p>
+        <div id="toggled-section" class="collapse">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+<pre class="prettyprint linenums">
+&lt;div&gt;
+  &lt;p&gt;What is Lorem ipsum?
+    &lt;a href=&quot;#toggled-section&quot; data-toggle=&quot;collapse&quot;&gt;
+      &lt;span data-hide-on=&quot;collapsed&quot;&gt;Hide&lt;/span&gt;
+      &lt;span data-hide-on=&quot;expanded&quot;&gt;Show&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/p&gt;
+  &lt;div id=&quot;toggled-section&quot; class=&quot;collapse&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../lib/better-collapse.js"></script>
-  <script type="text/javascript">
-    window.prettyPrint && window.prettyPrint();
-  </script>
-  </body>
+    <!--<h3>Example Accordion</h3>-->
+    <!--<div class="bs-docs-example">-->
+      <!--<div class="accordion" id="accordion2">-->
+        <!--<div class="accordion-group">-->
+          <!--<div class="accordion-heading">-->
+            <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">-->
+              <!--<span data-hide-on="collapsed"><i class="icon-plus"></i></span>-->
+              <!--<span data-hide-on="expanded"><i class="icon-minus"></i></span>-->
+              <!--Collapsible Group Item #1-->
+            <!--</a>-->
+          <!--</div>-->
+          <!--<div id="collapseOne" class="accordion-body collapse in">-->
+            <!--<div class="accordion-inner">-->
+              <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+              <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+              <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+              <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
+              <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
+              <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="accordion-group">-->
+          <!--<div class="accordion-heading">-->
+            <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">-->
+              <!--<span data-hide-on="collapsed"><i class="icon-plus"></i></span>-->
+              <!--<span data-hide-on="expanded"><i class="icon-minus"></i></span>-->
+              <!--Collapsible Group Item #2-->
+            <!--</a>-->
+          <!--</div>-->
+          <!--<div id="collapseTwo" class="accordion-body collapse">-->
+            <!--<div class="accordion-inner">-->
+              <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+              <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+              <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+              <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
+              <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
+              <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="accordion-group">-->
+          <!--<div class="accordion-heading">-->
+            <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">-->
+              <!--<span data-hide-on="collapsed"><i class="icon-plus"></i></span>-->
+              <!--<span data-hide-on="expanded"><i class="icon-minus"></i></span>-->
+              <!--Collapsible Group Item #3-->
+            <!--</a>-->
+          <!--</div>-->
+          <!--<div id="collapseThree" class="accordion-body collapse">-->
+            <!--<div class="accordion-inner">-->
+              <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+              <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+              <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+              <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
+              <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
+              <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+<!--<pre class="prettyprint linenums">-->
+<!--&lt;div class=&quot;accordion&quot; id=&quot;accordion2&quot;&gt;-->
+  <!--&lt;div class=&quot;accordion-group&quot;&gt;-->
+    <!--&lt;div class=&quot;accordion-heading&quot;&gt;-->
+      <!--&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseOne&quot;&gt;-->
+        <!--&lt;span data-hide-on=&quot;collapsed&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;-->
+        <!--&lt;span data-hide-on=&quot;expanded&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt;-->
+        <!--Collapsible Group Item #1-->
+      <!--&lt;/a&gt;-->
+    <!--&lt;/div&gt;-->
+    <!--&lt;div id=&quot;collapseOne&quot; class=&quot;accordion-body collapse in&quot;&gt;-->
+      <!--&lt;div class=&quot;accordion-inner&quot;&gt;-->
+        <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+        <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+        <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+        <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
+        <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
+        <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+      <!--&lt;/div&gt;-->
+    <!--&lt;/div&gt;-->
+  <!--&lt;/div&gt;-->
+  <!--&lt;div class=&quot;accordion-group&quot;&gt;-->
+    <!--&lt;div class=&quot;accordion-heading&quot;&gt;-->
+      <!--&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseTwo&quot;&gt;-->
+        <!--&lt;span data-hide-on=&quot;collapsed&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;-->
+        <!--&lt;span data-hide-on=&quot;expanded&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt;-->
+        <!--Collapsible Group Item #2-->
+      <!--&lt;/a&gt;-->
+    <!--&lt;/div&gt;-->
+    <!--&lt;div id=&quot;collapseTwo&quot; class=&quot;accordion-body collapse&quot;&gt;-->
+      <!--&lt;div class=&quot;accordion-inner&quot;&gt;-->
+        <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+        <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+        <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+        <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
+        <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
+        <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+      <!--&lt;/div&gt;-->
+    <!--&lt;/div&gt;-->
+  <!--&lt;/div&gt;-->
+  <!--&lt;div class=&quot;accordion-group&quot;&gt;-->
+    <!--&lt;div class=&quot;accordion-heading&quot;&gt;-->
+      <!--&lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion2&quot; href=&quot;#collapseThree&quot;&gt;-->
+        <!--&lt;span data-hide-on=&quot;collapsed&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;-->
+        <!--&lt;span data-hide-on=&quot;expanded&quot;&gt;&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt;-->
+        <!--Collapsible Group Item #3-->
+      <!--&lt;/a&gt;-->
+    <!--&lt;/div&gt;-->
+    <!--&lt;div id=&quot;collapseThree&quot; class=&quot;accordion-body collapse&quot;&gt;-->
+      <!--&lt;div class=&quot;accordion-inner&quot;&gt;-->
+        <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+        <!--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
+        <!--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+        <!--consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse-->
+        <!--cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non-->
+        <!--proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+      <!--&lt;/div&gt;-->
+    <!--&lt;/div&gt;-->
+  <!--&lt;/div&gt;-->
+<!--&lt;/div&gt;-->
+<!--</pre>-->
+
+  </section>
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../lib/better-collapse.js"></script>
+<script type="text/javascript">
+  window.prettyPrint && window.prettyPrint();
+</script>
+</body>
 </html> 
