@@ -1,11 +1,13 @@
 jQuery ->
-  class Accordion
+  class BetterCollapse
     constructor: (element, options) ->
       @$element = $ element
-      @$collapse = $ @$element.attr("data-target") or (href = @$element.attr("href")) and href.replace(/.*(?=#[^\s]+$)/, "")
+      @$collapse = $ options['target'] or (href = @$element.attr("href")) and href.replace(/.*(?=#[^\s]+$)/, "")
+      @$parent = $ options['parent']
       @settings = $.extend {}, @defaults, options
       @open_element = @$element.find @settings.hideOnCollapsed
       @closed_element = @$element.find @settings.hideOnExpanded
+
 
       @render()
     
@@ -16,6 +18,9 @@ jQuery ->
         @hide()
 
     show: ->
+      @$parent.find(@settings.hideOnCollapsed).addClass 'hide'
+      @$parent.find(@settings.hideOnExpanded).removeClass 'hide'
+
       @open_element.removeClass 'hide'
       @closed_element.addClass 'hide'
 
@@ -28,20 +33,20 @@ jQuery ->
         return true
       false
 
-  Accordion::defaults =
+  BetterCollapse::defaults =
     hideOnCollapsed: '[data-hide-on=collapsed]'
     hideOnExpanded: '[data-hide-on=expanded]'
 
-  $.fn.accordion = ( options ) ->
+  $.fn.better_collapse = ( options ) ->
     this.each ->
       $this = $ this
     
-      plugin = $this.data 'accordion'
+      plugin = $this.data 'better_collapse'
 
       if plugin is undefined
         settings = $.extend {}, $this.data(), options
-        plugin = new Accordion this, settings
-        $this.data 'accordion', plugin
+        plugin = new BetterCollapse this, settings
+        $this.data 'better_collapse', plugin
       if $.type(options) is 'string'
         plugin[options]()
 
@@ -55,6 +60,6 @@ jQuery ->
 
 $(document).on("click.collapse.data-api", "[data-toggle=collapse]", (e) ->
   $this = $ this
-  $this.accordion 'render'
+  $this.better_collapse 'render'
 ).ready ->
-  $("[data-toggle=collapse]").accordion()
+  $("[data-toggle=collapse]").better_collapse()
